@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:simple_food_app/models/popular_model.dart';
+import '../authentication/screen/login_signup.dart';
 import '../models/category_model.dart';
 import '../models/diet_model.dart';
 
@@ -374,7 +376,12 @@ class _HomePageState extends State<HomePage> {
       ),
       actions: [
         GestureDetector(
-          onTap: () {},
+          onTap: () async {
+            await FirebaseAuth.instance.signOut();
+            Navigator.of(context).pushReplacement(MaterialPageRoute(
+              builder: (context) => LoginSignupScreen(),
+            ));
+          },
           child: Container(
             width: 37,
             alignment: Alignment.center,
@@ -383,11 +390,7 @@ class _HomePageState extends State<HomePage> {
               color: Color(0xffF7F8F8),
               borderRadius: BorderRadius.circular(10),
             ),
-            child: SvgPicture.asset(
-              'assets/icons/dots.svg',
-              height: 5,
-              width: 5,
-            ),
+            child: Icon(Icons.logout, size: 28, color: Colors.black,),
           ),
         ),
       ],

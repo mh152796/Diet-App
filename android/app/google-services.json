@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "671522502224",
+    "project_id": "simple-food-app-4668e",
+    "storage_bucket": "simple-food-app-4668e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671522502224:android:4c4f3d7e5fbcdb678b4355",
+        "android_client_info": {
+          "package_name": "com.example.simple_food_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "671522502224-5u56vobh1mgmsitlr6nr50ekkl4uhq5b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDScqQj6GeclroAtq-vhJlMpcydu5ts7Jw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "671522502224-5u56vobh1mgmsitlr6nr50ekkl4uhq5b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

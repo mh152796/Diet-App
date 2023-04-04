@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-
+import 'package:firebase_core/firebase_core.dart';
+import 'authentication/screen/login_signup.dart';
 import 'pages/home.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -17,7 +20,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Poppins'
       ),
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: LoginSignupScreen(),
     );
   }
 }
